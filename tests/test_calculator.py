@@ -29,7 +29,7 @@ class TestBasicOperations:
     
     @pytest.mark.parametrize("calculator", [
         pytest.lazy_fixture("sequential_calculator"),
-        # pytest.lazy_fixture("queue_calculator")
+        pytest.lazy_fixture("queue_calculator")
     ])
     def test_simple_assignments(self, calculator):
         """Test simple variable assignments."""
@@ -58,7 +58,7 @@ class TestBasicOperations:
 
     @pytest.mark.parametrize("calculator", [
         pytest.lazy_fixture("sequential_calculator"),
-        # pytest.lazy_fixture("queue_calculator")
+        pytest.lazy_fixture("queue_calculator")
     ])
     def test_sequential_assignments(self, calculator):
         """Test assignments that use previous values."""
@@ -86,7 +86,7 @@ class TestBasicOperations:
 
     @pytest.mark.parametrize("calculator", [
         pytest.lazy_fixture("sequential_calculator"),
-        # pytest.lazy_fixture("queue_calculator")
+        pytest.lazy_fixture("queue_calculator")
     ])
     def test_arithmetic_expressions(self, calculator):
         """Test basic arithmetic operations."""
@@ -116,7 +116,7 @@ class TestBasicOperations:
 
     @pytest.mark.parametrize("calculator", [
         pytest.lazy_fixture("sequential_calculator"),
-        # pytest.lazy_fixture("queue_calculator")
+        pytest.lazy_fixture("queue_calculator")
     ])
     def test_compound_assignments(self, calculator):
         """Test compound assignments (+=, -=, etc)."""
