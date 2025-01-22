@@ -38,8 +38,8 @@ pip install -r requirements.txt
 from src.calculator import Calculator
 from src.config import Config, ExecutionMode
 
-# Create a calculator with queue-based execution
-config = Config(execution_mode=ExecutionMode.QUEUE)
+# Create a calculator with sequential-based execution
+config = Config(execution_mode=ExecutionMode.SEQUENTIAL)
 calc = Calculator(config=config)
 
 # Evaluate single expression
@@ -56,11 +56,20 @@ results = calc.evaluate_multiple(expressions)
 
 ## Execution Modes
 
-The application now supports two execution modes:
+The application supports two execution modes:
 
 1. **Sequential Execution**: Processes expressions one at a time in the order they are provided.
 
 2. **Queue-Based Execution**: Utilizes a queue to dynamically manage and execute expressions based on their dependencies. This mode allows for parallel execution where possible, ensuring that dependent expressions are executed in the correct order.
+
+## Evaluation Modes
+
+The application supports two execution modes:
+
+1. **Tree Evaluator**: AST Evaluator parse and evaluate using a recursive tree traversal algorithm. This mode is suitable for sequential execution and provides a simple way to evaluate expressions.
+
+2. **Regex Evaluator**: Expressions are evaluated using regular expressions.
+
 
 ### Configuration
 
