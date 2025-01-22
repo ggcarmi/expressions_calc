@@ -1,6 +1,9 @@
 # Advanced Calculator
 
-A high-performance calculator that supports parallel execution of arithmetic expressions with variable assignments.
+## TLDR
+This is a high-performance calculator that supports parallel execution of arithmetic expressions with advanced variable handling. It provides flexible execution modes and intelligent expression processing for complex computational tasks.
+
+**Quick Start:** `docker build -t calculator . && docker run calculator`
 
 ## Features
 
@@ -160,4 +163,3 @@ calculator/
 │   └── test_queue_executor.py
 ├── requirements.txt
 └── README.md
-```
